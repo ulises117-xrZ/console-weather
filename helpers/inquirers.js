@@ -52,7 +52,7 @@ const readInputG = async (message = '') => {
             message,
             validate(value) {
                 if (value.length === 0) {
-                    return `${'ERROR'.red} debes ingresar una tarea`
+                    return `${'ERROR'.red} debes ingresar un texto`
                 };
 
                 return true;

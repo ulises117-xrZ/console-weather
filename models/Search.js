@@ -1,7 +1,17 @@
 
+const axios = require('axios');
+
 
 class SearchH{
+    history = ['Tegucigalpa', 'Madrid', 'Ottawa'];
 
+    constructor(){
+        //TODO: read database if exists;
+    }
+
+    async searchCity(place){
+        //TODO: http request
+    }
 }
 
 

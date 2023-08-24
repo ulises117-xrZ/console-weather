@@ -1,4 +1,4 @@
-const { pause, inquirerMenu } = require("./helpers/inquirers");
+const { pause, inquirerMenu, readInputG } = require("./helpers/inquirers");
 
 
 const main = async () => {
@@ -8,7 +8,15 @@ const main = async () => {
 
         option = await inquirerMenu();
         console.log(option);
-
+        switch (option) {
+            case '1':
+                const place = await readInputG('Ingresa el lugar: ');
+                break;
+            case '2':
+                //mostrar historial de busqueda
+            default:
+                break;
+        }
         await pause();
     }
 }
