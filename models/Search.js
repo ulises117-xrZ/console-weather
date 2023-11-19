@@ -10,6 +10,7 @@ class SearchH{
     }
 
     async searchCity(place){
+        console.log('Ciudad: ', place)
         //TODO: http request
     }
 }

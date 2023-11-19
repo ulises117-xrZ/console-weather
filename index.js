@@ -1,8 +1,10 @@
 const { pause, inquirerMenu, readInputG } = require("./helpers/inquirers");
+const SearchH = require("./models/Search");
 
 
 const main = async () => {
     let option = '';
+    const searches = new SearchH();
 
     while(option !== '0'){
 
@@ -11,6 +13,7 @@ const main = async () => {
         switch (option) {
             case '1':
                 const place = await readInputG('Ingresa el lugar: ');
+               await searches.searchCity(place);
                 break;
             case '2':
                 //mostrar historial de busqueda
